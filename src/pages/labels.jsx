@@ -7,6 +7,7 @@ import Image from '../components/image'
 import { img_Labels } from '../utils/images'
 
 import styles from './labels.module.scss'
+import Alert from '../components/alert'
 
 const Labels = () => {
   return (
@@ -25,7 +26,8 @@ const Labels = () => {
             <div className='flex flex-col'>
               <p>We classify orders with three distinct identifiers: Retail, Wholesale, and Distribution. Most of your retail orders will have shipping labels generated automatically and included in your morning emails, but many wholesale orders and all distro orders will require you to purchase shipping once you have packed them up. You can use this guide as a quick reference to walk you through creating a custom label using our postage processing integration with Shopify, called <a href="http://apps.goshippo.com" target="_blank" rel="noopener noreferrer">Shippo.</a></p>
             </div>
-
+          </Section>
+          <Section>
             <h2 className="mb-3 border-b border-b-slate-400">Using Shippo</h2>
 
             <div className="flex-content">
@@ -78,7 +80,11 @@ const Labels = () => {
               <div className='flex-content'>
                 <div className='flex-[2]'>
                   <h4 className='mb-3 border-b border-b-slate-400/50'>Package Details</h4>
-                  <p>Scroll down the left column to the box titled <span className="font-semibold">Package Dimensions</span>. Here you will enter the size of your package and how much it weighs. Enter the Width, Length, and Height of the box the order is packed in, along with the weight in pounds (lb) or ounces (oz). Click the <span className="font-semibold">"Save"</span> button and the page should update with options from several shipping companies. In most cases, you will use <span className="font-semibold">UPS Ground</span>.</p>
+                  <p>Scroll down the left column to the box titled <span className="font-semibold">Package</span>. Here you will enter the dimensions0 of your package and how much it weighs. Enter the Width, Length, and Height of the box the order is packed in, along with the weight in pounds (lb) or ounces (oz). Click the <span className="font-semibold">"Save"</span> button and the page should update with options to select from several shipping companies.</p>
+                  <Alert>
+                    <h6 className='mb-2'>Always Round Up!</h6>
+                    <span className='text-xs'>For example, if you have a package that is 9 lb 2 oz, just round it up to 10 lb. Courier companies are more likely to reject a package for being slightly over its declared weight, but will never turn it down for being under weight.</span>
+                  </Alert>
                 </div>
                 <div className='flex-1'>
                   <figure className={styles.contentImg}>
@@ -103,7 +109,7 @@ const Labels = () => {
                   </figure>
                 </div>
                 <div className='flex-1'>
-                  <p>We always opt for a confirmed delivery, <span className='font-semibold'>especially</span> when it comes to higher volume orders. So be sure to find the section on the top right, labeled <span className="font-semibold">Shipping Extras</span>, and click the <span className="font-semibold">+Add</span> link next to <span className='font-italic'>Signature Confirmation.</span></p>
+                  <p>We always opt for a confirmed delivery, <span className='italic'>especially</span> when it comes to higher volume orders. So be sure to find the section on the top right, labeled <span className="font-semibold">Shipping Extras</span>, and click the <span className="font-semibold">+Add</span> link next to <span className='font-italic'>Signature Confirmation.</span></p>
                 </div>
               </div>
             </div>
