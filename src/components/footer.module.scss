@@ -1,0 +1,52 @@
+@use 'gerillass' as *;
+@use '../styles/config' as *;
+@use '../styles/functions/colors' as fnc;
+
+.pageFooter {
+  background-color: fnc.zinc(3);
+  padding-top: $space;
+}
+
+.links {
+  flex: 1;
+  nav {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+  }
+} 
+.extras {
+  flex: none;
+  > ul {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    > li {
+      > a {
+        color: var(--text-accent);
+        text-decoration: none;
+        border: 0;
+        &:hover {
+          color: var(--text-accent-2);
+          text-decoration: none;
+          border: 0;
+        }
+      }
+    }
+  }
+}
+.colophon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  > img {
+    width: fit-content;
+  }
+  > p {
+    font-size: 65%;
+  }
+}

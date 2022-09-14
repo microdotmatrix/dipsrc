@@ -1,0 +1,19 @@
+@use 'gerillass' as *;
+@use '../styles/config' as *;
+@use '../styles/functions/colors' as fnc;
+
+.alert {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem 0.5rem;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  gap: 1rem;
+  // Colors
+  background-image: linear-gradient(90deg, rgba(fnc.ocYellow(5),1) 25%, rgba(255,255,255,0) 100%);
+  border-left: 1em solid fnc.ocYellow(3);
+}

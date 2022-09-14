@@ -1,0 +1,21 @@
+@use '../styles/config' as *;
+@use '../styles/functions' as fn;
+
+.carousel__slide {
+  // background: fn.gradient(subtle-grey);
+  > img {
+    opacity: 0.5;
+    height: 700px;
+    position: relative;
+    left: 10vw;
+  }
+  .carousel__card {
+    @apply absolute bottom-24 right-24 bg-slate-400/25 p-12 w-full lg:w-3/4 shadow-xl shadow-black/40;
+    backdrop-filter: blur(3px);
+    border-radius: 0.5rem;
+    p {
+      font-size: $p;
+      font-weight: 300;
+    }
+  }
+}

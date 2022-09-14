@@ -1,0 +1,12 @@
+@use 'gerillass' as *;
+@use '../styles/config' as *;
+
+.flexContent {
+  display: flex;
+  flex-direction: column;
+  gap: $space;
+  margin: calc($space * 0.5) auto $space;
+  @include breakpoint(min, large) {
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,37 @@
+@use 'gerillass' as *;
+@use '../styles/config' as *;
+@use '../styles/functions/colors' as fnc;
+
+#warehouse {
+   figure {
+    @apply relative flex border border-slate-400/50 shadow-xl shadow-slate-500/20 rounded-md overflow-hidden mx-auto;
+    transform: scale(1);
+    transition: transform 300ms ease-out;
+    &:hover {
+      transform: scale(1.02);
+    }
+    img {
+      @apply relative w-full object-none;
+    }
+    @include breakpoint(min, medium) {
+      @apply w-11/12;
+    }
+  }
+}
+
+#warehouse__link {
+  .sub-menu {
+    position: absolute;
+    left: -150px;
+    top: 1.5rem;
+    opacity: 0;
+    width: 450px;
+    transition: opacity 400ms ease;
+  }
+  &:hover {
+    .sub-menu {
+      opacity: 1;
+    }
+  }
+
+}

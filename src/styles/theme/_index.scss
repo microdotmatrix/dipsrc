@@ -1,0 +1,55 @@
+@use 'gerillass' as *;
+@use '../config' as *;
+@use '../functions/colors' as fnc;
+@use '../functions/gradients' as fng;
+
+@forward 'light';
+
+
+$sub-title: #1f2731;
+$dip-yellow: #ffb700;
+$dip-black: #100c07;
+$dip-orange: #f8941c;
+
+
+body {
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-secondary);
+  &.title {
+    color: var(--text-alt-2)
+  }
+  &.sub-heading,
+  &.sub-title {
+    color: var(--text-alt);
+  }
+}
+
+a[href] {
+  color: var(--text-nav-link);
+  &:hover {
+    color: var(--text-accent-2);
+  }
+  &:focus {
+    color: var(--text-accent-3);
+  }
+}
+
+.active {
+  color: var(--text-nav-active);
+}
+
+a[href].btn {
+  color: fnc.slate(2);
+  background-color: rgba($dip-black, 0.8);
+  transition: all 500ms ease;
+  &:hover {
+    color: $dip-yellow;
+    outline-color: $dip-yellow;
+    background-color: rgba($dip-black, 1);
+  }
+}

@@ -1,0 +1,12 @@
+@use 'gerillass' as *;
+@use 'config' as *;
+
+@forward 'utilities/tailwind';
+@forward 'theme';
+
+@forward 'components/global';
+@forward 'components/typography';
+@forward 'components/buttons';
+@forward 'components/media';
+
+
