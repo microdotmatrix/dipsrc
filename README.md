@@ -6,3 +6,13 @@ Live: [https://dipsrc.vercel.app](https://dipsrc.vercel.app)
 ### Powered by React.js and Vite
 
 This repository is a little pet project I made to practice developing a React site entirely from scratch.
+Basic client rendered React app, compiled and deployed with Vite.js to Vercel.
+
+Libraries utilized:
+* Iconify React
+* Sass
+* Postcss
+* TailwindCSS
+* Framer Motion
+* React Helmet
+* Babel
